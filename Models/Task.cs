@@ -6,6 +6,7 @@
         public string? Name { get; set; }
        public int? Deadline { get; set; }
         public string? Description { get; set; }
+        public Project? Project { get; set; }
        
     }
 }

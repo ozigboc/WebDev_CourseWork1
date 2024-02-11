@@ -6,7 +6,8 @@
         public string? UserName { get; set; }
         public string? Email { get; set; }
         public int? Position { get; set; }
-        public string? DepartmentId { get; set; }
+        public Department? Department { get; set; }
+        public Task? Task { get; set; }
         
       
     
