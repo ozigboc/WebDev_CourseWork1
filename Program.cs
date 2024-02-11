@@ -1,4 +1,4 @@
-namespace WebDev_CpourseWork1
+namespace WebDev_CourseWork1
 {
     public class Program
     {

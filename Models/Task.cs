@@ -1,11 +1,11 @@
-﻿namespace WebDev_CpourseWork1.Models
+﻿namespace WebDev_CourseWork1.Models
 {
-    public class Organization
+    public class Task
     {
         public int? Id { get; set; }
         public string? Name { get; set; }
+       public int? Deadline { get; set; }
         public string? Description { get; set; }
-        public string? Address { get; set; }
-     
+       
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace WebDev_CpourseWork1.Models
+﻿namespace WebDev_CourseWork1.Models
 {
     public class Project
     {
