@@ -21,7 +21,7 @@ namespace WebDev_CourseWork1.Controllers
         // GET: Assignments
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Task.ToListAsync());
+            return View(await _context.Assignment.ToListAsync());
         }
 
         // GET: Assignments/Details/5
@@ -32,7 +32,7 @@ namespace WebDev_CourseWork1.Controllers
                 return NotFound();
             }
 
-            var assignment = await _context.Task
+            var assignment = await _context.Assignment
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (assignment == null)
             {
@@ -72,7 +72,7 @@ namespace WebDev_CourseWork1.Controllers
                 return NotFound();
             }
 
-            var assignment = await _context.Task.FindAsync(id);
+            var assignment = await _context.Assignment.FindAsync(id);
             if (assignment == null)
             {
                 return NotFound();
@@ -123,7 +123,7 @@ namespace WebDev_CourseWork1.Controllers
                 return NotFound();
             }
 
-            var assignment = await _context.Task
+            var assignment = await _context.Assignment
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (assignment == null)
             {
@@ -138,10 +138,10 @@ namespace WebDev_CourseWork1.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int? id)
         {
-            var assignment = await _context.Task.FindAsync(id);
+            var assignment = await _context.Assignment.FindAsync(id);
             if (assignment != null)
             {
-                _context.Task.Remove(assignment);
+                _context.Assignment.Remove(assignment);
             }
 
             await _context.SaveChangesAsync();
@@ -150,7 +150,7 @@ namespace WebDev_CourseWork1.Controllers
 
         private bool AssignmentExists(int? id)
         {
-            return _context.Task.Any(e => e.Id == id);
+            return _context.Assignment.Any(e => e.Id == id);
         }
     }
 }

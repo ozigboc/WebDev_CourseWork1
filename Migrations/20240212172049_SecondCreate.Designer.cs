@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebDev_CourseWork1.Models;
 
@@ -11,9 +12,11 @@ using WebDev_CourseWork1.Models;
 namespace WebDev_CourseWork1.Migrations
 {
     [DbContext(typeof(OrganisationContext))]
-    partial class OrganisationContextModelSnapshot : ModelSnapshot
+    [Migration("20240212172049_SecondCreate")]
+    partial class SecondCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
